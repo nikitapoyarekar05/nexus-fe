@@ -480,6 +480,7 @@ __turbopack_context__.s({
 const ENDPOINTS = {
     FETCH_ABOUT_YOU_CONTENTS: "/api/about-page?populate=*",
     FETCH_ALL_LISTINGS: "/listings",
+    SEARCH_LISTINGS: "/listings/search",
     FETCH_FAVORITE_LISTINGS: "/listings/wishlist",
     FAVORITE_UNFAVORITE_LISTING: "/listings/propertyId/wishlist",
     FETCH_LISTING_DETAILS: "/listings/propertyId"
@@ -517,19 +518,43 @@ const BrowseListings = ()=>{
     _s();
     const [listings, setListings] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])([]);
     const [loading, setLoading] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(true);
+    const [searchQuery, setSearchQuery] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
+    const [debouncedSearchQuery, setDebouncedSearchQuery] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "BrowseListings.useEffect": ()=>{
+            const handler = setTimeout({
+                "BrowseListings.useEffect.handler": ()=>{
+                    setDebouncedSearchQuery(searchQuery);
+                }
+            }["BrowseListings.useEffect.handler"], 500);
+            return ({
+                "BrowseListings.useEffect": ()=>{
+                    clearTimeout(handler);
+                }
+            })["BrowseListings.useEffect"];
+        }
+    }["BrowseListings.useEffect"], [
+        searchQuery
+    ]);
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "BrowseListings.useEffect": ()=>{
             const fetchListings = {
                 "BrowseListings.useEffect.fetchListings": async ()=>{
+                    setLoading(true);
                     try {
-                        const res = await fetch(`${("TURBOPACK compile-time value", "http://localhost:3300")}${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$global$2f$endpoints$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["ENDPOINTS"].FETCH_ALL_LISTINGS}`);
+                        const url = debouncedSearchQuery ? `${"TURBOPACK compile-time value", "http://localhost:3300"}${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$global$2f$endpoints$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["ENDPOINTS"].SEARCH_LISTINGS}?query=${debouncedSearchQuery}` : `${"TURBOPACK compile-time value", "http://localhost:3300"}${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$global$2f$endpoints$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["ENDPOINTS"].FETCH_ALL_LISTINGS}`;
+                        const res = await fetch(url);
                         const data = await res.json();
                         const formattedListings = data.listings.map({
                             "BrowseListings.useEffect.fetchListings.formattedListings": (listing)=>(0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$global$2f$utilities$2f$helpers$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["formatListingResponse"])(listing)
                         }["BrowseListings.useEffect.fetchListings.formattedListings"]);
+                        console.log({
+                            formattedListings
+                        });
                         setListings(formattedListings);
                     } catch (error) {
                         console.error("Error fetching listings:", error);
+                        setListings([]);
                     } finally{
                         setLoading(false);
                     }
@@ -537,7 +562,14 @@ const BrowseListings = ()=>{
             }["BrowseListings.useEffect.fetchListings"];
             fetchListings();
         }
-    }["BrowseListings.useEffect"], []);
+    }["BrowseListings.useEffect"], [
+        debouncedSearchQuery
+    ]);
+    const handleSearchInputChange = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useCallback"])({
+        "BrowseListings.useCallback[handleSearchInputChange]": (event)=>{
+            setSearchQuery(event.target.value);
+        }
+    }["BrowseListings.useCallback[handleSearchInputChange]"], []);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "max-w-7xl mx-auto pt-8 px-4",
         children: [
@@ -546,7 +578,7 @@ const BrowseListings = ()=>{
                 children: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$content$2f$listing$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["LISTING_TEXT"].searchPropertyText
             }, void 0, false, {
                 fileName: "[project]/src/components/custom/templates/Listings.tsx",
-                lineNumber: 45,
+                lineNumber: 68,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -554,28 +586,30 @@ const BrowseListings = ()=>{
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Input"], {
                     type: "text",
                     placeholder: "Title, Description or Address",
-                    className: "w-full sm:max-w-md"
+                    className: "w-full sm:max-w-md",
+                    value: searchQuery,
+                    onChange: handleSearchInputChange
                 }, void 0, false, {
                     fileName: "[project]/src/components/custom/templates/Listings.tsx",
-                    lineNumber: 51,
+                    lineNumber: 73,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/custom/templates/Listings.tsx",
-                lineNumber: 50,
+                lineNumber: 72,
                 columnNumber: 7
             }, this),
             loading ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                 children: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$content$2f$listing$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["LISTING_TEXT"].loadingListings
             }, void 0, false, {
                 fileName: "[project]/src/components/custom/templates/Listings.tsx",
-                lineNumber: 59,
+                lineNumber: 83,
                 columnNumber: 9
-            }, this) : listings.length === 0 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+            }, this) : listings.length === 0 && debouncedSearchQuery !== "" ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                 children: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$content$2f$listing$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["LISTING_TEXT"].noListingsFound
             }, void 0, false, {
                 fileName: "[project]/src/components/custom/templates/Listings.tsx",
-                lineNumber: 61,
+                lineNumber: 85,
                 columnNumber: 9
             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6",
@@ -583,22 +617,22 @@ const BrowseListings = ()=>{
                         ...property
                     }, property.id, false, {
                         fileName: "[project]/src/components/custom/templates/Listings.tsx",
-                        lineNumber: 65,
+                        lineNumber: 89,
                         columnNumber: 13
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/src/components/custom/templates/Listings.tsx",
-                lineNumber: 63,
+                lineNumber: 87,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/custom/templates/Listings.tsx",
-        lineNumber: 44,
+        lineNumber: 67,
         columnNumber: 5
     }, this);
 };
-_s(BrowseListings, "XSpFPRublOedJQvrhfNls4lrL/8=");
+_s(BrowseListings, "r05QurC9XKJVqHfDP873ZqKJQzE=");
 _c = BrowseListings;
 const __TURBOPACK__default__export__ = BrowseListings;
 var _c;
