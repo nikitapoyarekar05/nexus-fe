@@ -2,7 +2,8 @@
 
 import React, { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { ENDPOINTS } from "../../../global/endpoints";
+// ToDo: Refactor this later
+// import { ENDPOINTS } from "../../../global/endpoints";
 import AboutHero from "../molecules/AboutHero";
 import AboutCards from "../molecules/AboutCards";
 import AboutReadyToBeginInfo from "../molecules/AboutReadyToBeginInfo";
@@ -114,8 +115,10 @@ export default function AboutUs() {
   useEffect(() => {
     async function fetchAboutData() {
       try {
+        // ToDo: Refactor this later
         const response = await fetch(
-          `${process.env.NEXT_PUBLIC_STRAPI_API_URL}${ENDPOINTS.FETCH_ABOUT_YOU_CONTENTS}`
+          // `${process.env.NEXT_PUBLIC_STRAPI_API_URL}${ENDPOINTS.FETCH_ABOUT_YOU_CONTENTS}`
+          "https://truthful-charity-e28207744b.strapiapp.com//api/about-page?populate=*"
         );
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
