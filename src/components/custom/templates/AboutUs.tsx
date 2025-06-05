@@ -118,7 +118,7 @@ export default function AboutUs() {
         // ToDo: Refactor this later
         const response = await fetch(
           // `${process.env.NEXT_PUBLIC_STRAPI_API_URL}${ENDPOINTS.FETCH_ABOUT_YOU_CONTENTS}`
-          "https://truthful-charity-e28207744b.strapiapp.com//api/about-page?populate=*"
+          "https://truthful-charity-e28207744b.strapiapp.com/api/about-page?populate=*"
         );
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);

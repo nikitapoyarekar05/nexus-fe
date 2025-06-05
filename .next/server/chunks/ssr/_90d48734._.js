@@ -489,7 +489,7 @@ const BrowseListings = ()=>{
         const fetchListings = async ()=>{
             setLoading(true);
             try {
-                const url = debouncedSearchQuery ? `${"TURBOPACK compile-time value", "http://localhost:3300"}${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$global$2f$endpoints$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ENDPOINTS"].SEARCH_LISTINGS}?query=${debouncedSearchQuery}` : `${"TURBOPACK compile-time value", "http://localhost:3300"}${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$global$2f$endpoints$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ENDPOINTS"].FETCH_ALL_LISTINGS}`;
+                const url = debouncedSearchQuery ? `${"TURBOPACK compile-time value", "https://de30-103-58-154-123.ngrok-free.app"}${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$global$2f$endpoints$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ENDPOINTS"].SEARCH_LISTINGS}?query=${debouncedSearchQuery}` : `${"TURBOPACK compile-time value", "https://de30-103-58-154-123.ngrok-free.app"}${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$global$2f$endpoints$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ENDPOINTS"].FETCH_ALL_LISTINGS}`;
                 const res = await fetch(url);
                 const data = await res.json();
                 const formattedListings = data.listings.map((listing)=>(0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$global$2f$utilities$2f$helpers$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["formatListingResponse"])(listing));
