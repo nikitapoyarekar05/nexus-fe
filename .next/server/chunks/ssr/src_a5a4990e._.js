@@ -184,6 +184,7 @@ const LISTING_TEXT = {
     loadingListings: "Loading listings...",
     loadingListingDetails: "Loading listing details...",
     yourFavoriteListings: "Your Favorite listings",
+    noFavoriteListings: "You haven't favorited any listings yet!",
     noListingsFound: "No listings found.",
     listingNotFound: "Listing not found.",
     searchPropertyText: "Search properties to rent",

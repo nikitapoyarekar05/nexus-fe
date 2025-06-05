@@ -786,6 +786,7 @@ const LISTING_TEXT = {
     loadingListings: "Loading listings...",
     loadingListingDetails: "Loading listing details...",
     yourFavoriteListings: "Your Favorite listings",
+    noFavoriteListings: "You haven't favorited any listings yet!",
     noListingsFound: "No listings found.",
     listingNotFound: "Listing not found.",
     searchPropertyText: "Search properties to rent",
@@ -1200,7 +1201,7 @@ const ListingDetail = ()=>{
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
         const fetchListing = async ()=>{
             try {
-                const res = await fetch(`${("TURBOPACK compile-time value", "http://localhost:3300")}/listings/${id}`);
+                const res = await fetch(`${("TURBOPACK compile-time value", "http://127.0.0.1:3300")}/listings/${id}`);
                 const data = await res.json();
                 const formattedData = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$global$2f$utilities$2f$helpers$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["formatListingResponse"])(data);
                 setProperty(formattedData);
@@ -1217,7 +1218,7 @@ const ListingDetail = ()=>{
     const toggleWishlist = async ()=>{
         if (!property) return;
         try {
-            const response = await fetch(`${("TURBOPACK compile-time value", "http://localhost:3300")}${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$global$2f$endpoints$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ENDPOINTS"].FAVORITE_UNFAVORITE_LISTING.replace("propertyId", property.id.toString())}`, {
+            const response = await fetch(`${("TURBOPACK compile-time value", "http://127.0.0.1:3300")}${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$global$2f$endpoints$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ENDPOINTS"].FAVORITE_UNFAVORITE_LISTING.replace("propertyId", property.id.toString())}`, {
                 method: "PATCH",
                 headers: {
                     "Content-Type": "application/json"

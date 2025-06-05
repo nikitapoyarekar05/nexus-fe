@@ -97,14 +97,20 @@ const FavoriteListings = () => {
 
       {loading ? (
         <p>{LISTING_TEXT.loadingListings}</p>
-      ) : listings.length === 0 && debouncedSearchQuery !== "" ? (
-        <p>{LISTING_TEXT.noListingsFound}</p>
       ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {listings.map((property) => (
-            <PropertyDetailsCard key={property.id} {...property} />
-          ))}
-        </div>
+        <>
+          {listings.length === 0 && debouncedSearchQuery === "" ? (
+            <p>{LISTING_TEXT.noFavoriteListings}</p>
+          ) : listings.length === 0 && debouncedSearchQuery !== "" ? (
+            <p>{LISTING_TEXT.noListingsFound}</p>
+          ) : (
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+              {listings.map((property) => (
+                <PropertyDetailsCard key={property.id} {...property} />
+              ))}
+            </div>
+          )}
+        </>
       )}
     </div>
   );

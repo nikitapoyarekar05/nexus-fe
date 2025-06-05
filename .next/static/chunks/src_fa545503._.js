@@ -237,6 +237,7 @@ const LISTING_TEXT = {
     loadingListings: "Loading listings...",
     loadingListingDetails: "Loading listing details...",
     yourFavoriteListings: "Your Favorite listings",
+    noFavoriteListings: "You haven't favorited any listings yet!",
     noListingsFound: "No listings found.",
     listingNotFound: "Listing not found.",
     searchPropertyText: "Search properties to rent",
@@ -542,7 +543,7 @@ const BrowseListings = ()=>{
                 "BrowseListings.useEffect.fetchListings": async ()=>{
                     setLoading(true);
                     try {
-                        const url = debouncedSearchQuery ? `${"TURBOPACK compile-time value", "https://de30-103-58-154-123.ngrok-free.app"}${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$global$2f$endpoints$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["ENDPOINTS"].SEARCH_LISTINGS}?query=${debouncedSearchQuery}` : `${"TURBOPACK compile-time value", "https://de30-103-58-154-123.ngrok-free.app"}${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$global$2f$endpoints$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["ENDPOINTS"].FETCH_ALL_LISTINGS}`;
+                        const url = debouncedSearchQuery ? `${"TURBOPACK compile-time value", "http://127.0.0.1:3300"}${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$global$2f$endpoints$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["ENDPOINTS"].SEARCH_LISTINGS}?query=${debouncedSearchQuery}` : `${"TURBOPACK compile-time value", "http://127.0.0.1:3300"}${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$global$2f$endpoints$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["ENDPOINTS"].FETCH_ALL_LISTINGS}`;
                         const res = await fetch(url);
                         const data = await res.json();
                         const formattedListings = data.listings.map({

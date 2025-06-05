@@ -237,6 +237,7 @@ const LISTING_TEXT = {
     loadingListings: "Loading listings...",
     loadingListingDetails: "Loading listing details...",
     yourFavoriteListings: "Your Favorite listings",
+    noFavoriteListings: "You haven't favorited any listings yet!",
     noListingsFound: "No listings found.",
     listingNotFound: "Listing not found.",
     searchPropertyText: "Search properties to rent",
@@ -544,9 +545,9 @@ const FavoriteListings = ()=>{
                     try {
                         let url;
                         if (debouncedSearchQuery) {
-                            url = `${"TURBOPACK compile-time value", "http://localhost:3300"}${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$global$2f$endpoints$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["ENDPOINTS"].SEARCH_LISTINGS}?query=${debouncedSearchQuery}&wishlistedOnly=true`;
+                            url = `${"TURBOPACK compile-time value", "http://127.0.0.1:3300"}${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$global$2f$endpoints$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["ENDPOINTS"].SEARCH_LISTINGS}?query=${debouncedSearchQuery}&wishlistedOnly=true`;
                         } else {
-                            url = `${"TURBOPACK compile-time value", "http://localhost:3300"}${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$global$2f$endpoints$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["ENDPOINTS"].FETCH_FAVORITE_LISTINGS}`;
+                            url = `${"TURBOPACK compile-time value", "http://127.0.0.1:3300"}${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$global$2f$endpoints$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["ENDPOINTS"].FETCH_FAVORITE_LISTINGS}`;
                         }
                         const res = await fetch(url);
                         const data = await res.json();
@@ -617,26 +618,34 @@ const FavoriteListings = ()=>{
                 fileName: "[project]/src/components/custom/templates/FavoriteListings.tsx",
                 lineNumber: 99,
                 columnNumber: 9
-            }, this) : listings.length === 0 && debouncedSearchQuery !== "" ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                children: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$content$2f$listing$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["LISTING_TEXT"].noListingsFound
-            }, void 0, false, {
-                fileName: "[project]/src/components/custom/templates/FavoriteListings.tsx",
-                lineNumber: 101,
-                columnNumber: 9
-            }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6",
-                children: listings.map((property)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$custom$2f$molecules$2f$PropertyDetailsCard$2f$index$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                        ...property
-                    }, property.id, false, {
-                        fileName: "[project]/src/components/custom/templates/FavoriteListings.tsx",
-                        lineNumber: 105,
-                        columnNumber: 13
-                    }, this))
-            }, void 0, false, {
-                fileName: "[project]/src/components/custom/templates/FavoriteListings.tsx",
-                lineNumber: 103,
-                columnNumber: 9
-            }, this)
+            }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
+                children: listings.length === 0 && debouncedSearchQuery === "" ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                    children: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$content$2f$listing$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["LISTING_TEXT"].noFavoriteListings
+                }, void 0, false, {
+                    fileName: "[project]/src/components/custom/templates/FavoriteListings.tsx",
+                    lineNumber: 103,
+                    columnNumber: 13
+                }, this) : listings.length === 0 && debouncedSearchQuery !== "" ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                    children: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$content$2f$listing$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["LISTING_TEXT"].noListingsFound
+                }, void 0, false, {
+                    fileName: "[project]/src/components/custom/templates/FavoriteListings.tsx",
+                    lineNumber: 105,
+                    columnNumber: 13
+                }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6",
+                    children: listings.map((property)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$custom$2f$molecules$2f$PropertyDetailsCard$2f$index$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                            ...property
+                        }, property.id, false, {
+                            fileName: "[project]/src/components/custom/templates/FavoriteListings.tsx",
+                            lineNumber: 109,
+                            columnNumber: 17
+                        }, this))
+                }, void 0, false, {
+                    fileName: "[project]/src/components/custom/templates/FavoriteListings.tsx",
+                    lineNumber: 107,
+                    columnNumber: 13
+                }, this)
+            }, void 0, false)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/custom/templates/FavoriteListings.tsx",
