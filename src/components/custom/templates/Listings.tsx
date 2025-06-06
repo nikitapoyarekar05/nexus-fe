@@ -71,7 +71,7 @@ const BrowseListings = () => {
       <div className="mb-8">
         <Input
           type="text"
-          placeholder="Title, Description or Address"
+          placeholder="Search your listing by Title, Description or Address"
           className="w-full sm:max-w-md"
           value={searchQuery}
           onChange={handleSearchInputChange}
