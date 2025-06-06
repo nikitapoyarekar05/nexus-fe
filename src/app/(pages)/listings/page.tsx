@@ -5,7 +5,7 @@ import BrowseListings from "../../../components/custom/templates/Listings";
 const Listings = () => {
   return (
     <div className="bg-gradient-to-b from-white to-violet-50">
-      <BrowseListings />;
+      <BrowseListings />
     </div>
   );
 };
