@@ -83,7 +83,7 @@ describe("HeroSection", () => {
     ).toBeInTheDocument();
   });
 
-  test.only("renders a Browse Properties button with correct text and link", () => {
+  test("renders a Browse Properties button with correct text and link", () => {
     const button = screen.getByRole("button", { name: /Browse Properties/i });
 
     expect(button).toBeInTheDocument();
