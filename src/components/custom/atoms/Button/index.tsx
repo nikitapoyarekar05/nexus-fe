@@ -1,7 +1,6 @@
-// import styles from "./Button.module.css";
 import { ReactNode } from "react";
 import { MouseEventHandler } from "react";
-import { Button as BaseButton } from "@/components/ui/button";
+import { Button as BaseButton } from "../../../ui/button";
 
 type ButtonVariant = "secondary" | "destructive" | "outline" | "ghost" | "link";
 type ButtonType = "button" | "submit" | "reset";

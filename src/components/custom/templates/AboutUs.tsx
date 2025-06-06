@@ -58,7 +58,7 @@ type AboutPageData = {
   region: Region[];
 };
 
-export const renderRichText = (blocks?: RichTextBlock[]) => {
+const renderRichText = (blocks?: RichTextBlock[]) => {
   if (!blocks || !Array.isArray(blocks)) return null;
 
   return blocks.map((block, i) => {
