@@ -8,7 +8,7 @@ import { Toaster } from "sonner";
 export const metadata: Metadata = {
   title: "Neighbourly",
   description:
-    "Neighbourly is your trusted real estate platform to discover, list, and manage residential properties with ease. Explore verified listings, connect with homeowners and agents, and find your perfect home in just a few clicks.",
+    "Neighbourly is a B2C rental platform that helps you find verified homes, apartments, and rooms for rent with ease. Explore listings, connect directly with property owners or agents, and rent your next home confidently — all in one place.",
 };
 
 export default function RootLayout({
