@@ -21,12 +21,12 @@ import { PropertyDetails } from "../../../../global/utilities/interface";
 import { LISTING_TEXT } from "../../../..//content/listing";
 
 const PropertyDetailsCard = (props: PropertyDetails) => {
-  const { id, title, address, features } = props;
+  const { id, title, address, features, thumbNailUrl } = props;
 
   // ToDo: Update the image source here later.
   // const [imageSrc, setImageSrc] = useState(thumbNailUrl");
-  const imageUrl = getRandomImageSource();
-  const [imageSrc, setImageSrc] = useState(imageUrl);
+  // const imageUrl = getRandomImageSource();
+  const [imageSrc, setImageSrc] = useState(thumbNailUrl);
 
   return (
     <Link
