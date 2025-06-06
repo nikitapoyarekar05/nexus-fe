@@ -43,7 +43,6 @@ const BrowseListings = () => {
         const formattedListings: PropertyDetails[] = data.listings.map(
           (listing: BackendListingResponse) => formatListingResponse(listing)
         );
-        console.log({ formattedListings });
         setListings(formattedListings);
       } catch (error) {
         console.error("Error fetching listings:", error);

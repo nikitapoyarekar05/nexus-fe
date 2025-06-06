@@ -160,8 +160,8 @@ const ListingDetail = () => {
           <div className="lg:w-[70%] w-full">
             <Carousel
               // ToDO: Hardcoded src URL for now. Update later as the response contains dummy data.
-              src={property.thumbNailUrl}
-              // src="/propertyPlaceholder1.svg"
+              // src={property.thumbNailUrl}
+              src="/propertyPlaceholder1.svg"
               altText={property.title}
               customClass="rounded-xl w-full h-[400px] object-cover mb-4"
             />

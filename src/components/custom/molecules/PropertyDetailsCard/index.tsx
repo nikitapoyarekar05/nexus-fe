@@ -25,8 +25,8 @@ const PropertyDetailsCard = (props: PropertyDetails) => {
 
   // ToDo: Update the image source here later.
   // const [imageSrc, setImageSrc] = useState(thumbNailUrl");
-  // const imageUrl = getRandomImageSource();
-  const [imageSrc, setImageSrc] = useState(thumbNailUrl);
+  const imageUrl = getRandomImageSource();
+  const [imageSrc, setImageSrc] = useState(imageUrl);
 
   return (
     <Link
