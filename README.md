@@ -42,10 +42,11 @@ npm install
 Create a `.env` file in the root:
 
 ```env
-NEXT_PUBLIC_API_URL=http://localhost:3300/
+NEXT_PUBLIC_API_URL=ADD_YOUR_NEXT_PUBLIC_API_URL
+NEXT_PUBLIC_STRAPI_API_URL=ADD_YOUR_PUBLIC_STRAPI_API_URL
 ```
 
-> Replace with your production API URL if deployed.
+> Replace with your production - BACKEND and STRAPI API URL if deployed.
 
 ---
 
@@ -89,7 +90,7 @@ npm test -- --coverage
 ## 🌍 Deployment
 
 Deployed on [Vercel](https://vercel.com/)  
-You can deploy by connecting this GitHub repo and setting the environment variable `NEXT_PUBLIC_API_URL`.
+You can deploy by connecting this GitHub repo and setting the environment variable `NEXT_PUBLIC_API_URL` and `NEXT_PUBLIC_STRAPI_API_URL`.
 
 ---
 
