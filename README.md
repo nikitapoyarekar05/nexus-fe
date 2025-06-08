@@ -46,7 +46,7 @@ NEXT_PUBLIC_API_URL=ADD_YOUR_NEXT_PUBLIC_API_URL
 NEXT_PUBLIC_STRAPI_API_URL=ADD_YOUR_PUBLIC_STRAPI_API_URL
 ```
 
-> Replace with your production API URL if deployed.
+> Replace with your production - BACKEND and STRAPI API URL if deployed.
 
 ---
 
