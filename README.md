@@ -79,6 +79,15 @@ npm test -- --coverage
 
 ---
 
+## 🎨 Design Credit & License
+The UI design used in this project was inspired by a Figma Community asset created by [@illiyinstudio](https://www.instagram.com/illiyinstudio/) and [@dhuhacreative](https://www.instagram.com/dhuhacreative/).
+
+This project is strictly for **personal, educational, and non-commercial use** as per the original design’s [Personal Use License]([link-to-license-or-screenshot](https://www.figma.com/design/HAOCzBg9Zo2v1dJkie3YQQ/-FREE--Estatery---Real-Estate-SaaS-Web-and-Mobile-UI-Kit--Community-?node-id=1-8120&p=f&t=4HfqhuAZEDBb8doq-0)).
+
+No commercial deployment or public distribution of this design is intended.
+
+---
+
 ## 🎨 Design Principles
 
 - **📱 Mobile First Design**: Layouts and components are optimized for smaller screens before scaling up.
