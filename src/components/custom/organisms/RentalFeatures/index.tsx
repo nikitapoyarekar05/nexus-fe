@@ -19,6 +19,7 @@ const RentalFeatures = (props: RentalFeaturesProps) => {
       { label: "Cooling", value: features.cooling ?? "" },
       { label: "Heating", value: features.heating ?? "" },
       { label: "Parking Area", value: features.parking ?? "" },
+      { label: "Type", value: features.type ?? "" },
     ];
   };
   return (
