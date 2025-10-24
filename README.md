@@ -1,6 +1,6 @@
 # 🏡 Neighbourly – Real Estate Frontend (Next.js)
 
-**Neighbourly** is a responsive, mobile-first frontend application for a real estate SaaS platform built using **Next.js**, **Tailwind CSS**, and **shadcn/ui**. It enables users to explore properties for rent, buy, or sale, with clean UI and accessibility-first components. This app communicates with the NestJS-based backend via REST APIs.
+**Neighbourly** is a responsive, mobile-first frontend application for a real estate platform built using **Next.js**, **Tailwind CSS**, and **shadcn/ui**. It enables users to explore properties for rent, buy, or sale, with clean UI and accessibility-first components. This app communicates with the NestJS-based backend via REST APIs.
 
 ---
 
