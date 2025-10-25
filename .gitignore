@@ -1,7 +1,12 @@
+# Node.js dependencies
 node_modules
+
+# Environment variables
 .env
 
+# Next.js build output
 .next
 
-#coverage
+# Test coverage reports
+# coverage
 coverage/
