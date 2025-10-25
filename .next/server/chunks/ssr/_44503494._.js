@@ -103,7 +103,6 @@ function Button({ className, variant, size, asChild = false, ...props }) {
 
 var { g: global, __dirname } = __turbopack_context__;
 {
-// import styles from "./Button.module.css";
 __turbopack_context__.s({
     "default": (()=>__TURBOPACK__default__export__)
 });
@@ -129,7 +128,7 @@ const Button = (props)=>{
         children: children
     }, void 0, false, {
         fileName: "[project]/src/components/custom/atoms/Button/index.tsx",
-        lineNumber: 35,
+        lineNumber: 34,
         columnNumber: 5
     }, this);
 };

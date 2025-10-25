@@ -219,7 +219,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$content$2f$listing$2e
 ;
 ;
 const PropertyDetailsCard = (props)=>{
-    const { id, title, address, features } = props;
+    const { id, title, address, features, thumbNailUrl } = props;
     // ToDo: Update the image source here later.
     // const [imageSrc, setImageSrc] = useState(thumbNailUrl");
     const imageUrl = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$global$2f$utilities$2f$helpers$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["getRandomImageSource"])();

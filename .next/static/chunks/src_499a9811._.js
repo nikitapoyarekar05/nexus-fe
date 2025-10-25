@@ -104,7 +104,6 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
 
 var { g: global, __dirname, k: __turbopack_refresh__, m: module } = __turbopack_context__;
 {
-// import styles from "./Button.module.css";
 __turbopack_context__.s({
     "default": (()=>__TURBOPACK__default__export__)
 });
@@ -130,7 +129,7 @@ const Button = (props)=>{
         children: children
     }, void 0, false, {
         fileName: "[project]/src/components/custom/atoms/Button/index.tsx",
-        lineNumber: 35,
+        lineNumber: 34,
         columnNumber: 5
     }, this);
 };
@@ -1074,6 +1073,10 @@ const RentalFeatures = (props)=>{
             {
                 label: "Parking Area",
                 value: features.parking ?? ""
+            },
+            {
+                label: "Type",
+                value: features.type ?? ""
             }
         ];
     };
@@ -1084,7 +1087,7 @@ const RentalFeatures = (props)=>{
                 children: "Rental features"
             }, void 0, false, {
                 fileName: "[project]/src/components/custom/organisms/RentalFeatures/index.tsx",
-                lineNumber: 26,
+                lineNumber: 27,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1094,18 +1097,18 @@ const RentalFeatures = (props)=>{
                         value: feature.value
                     }, feature.label, false, {
                         fileName: "[project]/src/components/custom/organisms/RentalFeatures/index.tsx",
-                        lineNumber: 29,
+                        lineNumber: 30,
                         columnNumber: 11
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/src/components/custom/organisms/RentalFeatures/index.tsx",
-                lineNumber: 27,
+                lineNumber: 28,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/custom/organisms/RentalFeatures/index.tsx",
-        lineNumber: 25,
+        lineNumber: 26,
         columnNumber: 5
     }, this);
 };
@@ -1277,7 +1280,7 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
 
 var { g: global, __dirname, k: __turbopack_refresh__, m: module } = __turbopack_context__;
 {
-/* eslint-disable react/no-unescaped-entities */ __turbopack_context__.s({
+__turbopack_context__.s({
     "default": (()=>__TURBOPACK__default__export__)
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/build/polyfills/process.js [app-client] (ecmascript)");
@@ -1393,12 +1396,12 @@ const ListingDetail = ()=>{
                 children: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$content$2f$listing$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["LISTING_TEXT"].loadingListingDetails
             }, void 0, false, {
                 fileName: "[project]/src/components/custom/templates/ListingDetail.tsx",
-                lineNumber: 112,
+                lineNumber: 111,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/src/components/custom/templates/ListingDetail.tsx",
-            lineNumber: 111,
+            lineNumber: 110,
             columnNumber: 7
         }, this);
     }
@@ -1409,12 +1412,12 @@ const ListingDetail = ()=>{
                 children: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$content$2f$listing$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["LISTING_TEXT"].listingNotFound
             }, void 0, false, {
                 fileName: "[project]/src/components/custom/templates/ListingDetail.tsx",
-                lineNumber: 120,
+                lineNumber: 119,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/src/components/custom/templates/ListingDetail.tsx",
-            lineNumber: 119,
+            lineNumber: 118,
             columnNumber: 7
         }, this);
     }
@@ -1426,7 +1429,7 @@ const ListingDetail = ()=>{
                 urlToNavigate: "/listings"
             }, void 0, false, {
                 fileName: "[project]/src/components/custom/templates/ListingDetail.tsx",
-                lineNumber: 127,
+                lineNumber: 126,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -1440,7 +1443,7 @@ const ListingDetail = ()=>{
                                 address: property.address
                             }, void 0, false, {
                                 fileName: "[project]/src/components/custom/templates/ListingDetail.tsx",
-                                lineNumber: 130,
+                                lineNumber: 129,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1458,14 +1461,14 @@ const ListingDetail = ()=>{
                                                 className: "text-purple-600 w-4 h-4"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/custom/templates/ListingDetail.tsx",
-                                                lineNumber: 139,
+                                                lineNumber: 138,
                                                 columnNumber: 15
                                             }, this),
                                             property.wishlisted ? "Favorite" : "Add to Favorites"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/custom/templates/ListingDetail.tsx",
-                                        lineNumber: 132,
+                                        lineNumber: 131,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$custom$2f$atoms$2f$Button$2f$index$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -1480,26 +1483,26 @@ const ListingDetail = ()=>{
                                                 className: "text-purple-600 w-4 h-4"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/custom/templates/ListingDetail.tsx",
-                                                lineNumber: 152,
+                                                lineNumber: 151,
                                                 columnNumber: 15
                                             }, this),
                                             "Share"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/custom/templates/ListingDetail.tsx",
-                                        lineNumber: 145,
+                                        lineNumber: 144,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/custom/templates/ListingDetail.tsx",
-                                lineNumber: 131,
+                                lineNumber: 130,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/custom/templates/ListingDetail.tsx",
-                        lineNumber: 129,
+                        lineNumber: 128,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1509,18 +1512,18 @@ const ListingDetail = ()=>{
                                 className: "lg:w-[70%] w-full",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$custom$2f$molecules$2f$Carousel$2f$index$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                     // ToDO: Hardcoded src URL for now. Update later as the response contains dummy data.
-                                    // src={property.thumbNailUrl"}
+                                    // src={property.thumbNailUrl}
                                     src: "/propertyPlaceholder1.svg",
                                     altText: property.title,
                                     customClass: "rounded-xl w-full h-[400px] object-cover mb-4"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/custom/templates/ListingDetail.tsx",
-                                    lineNumber: 162,
+                                    lineNumber: 161,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/custom/templates/ListingDetail.tsx",
-                                lineNumber: 161,
+                                lineNumber: 160,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1531,31 +1534,31 @@ const ListingDetail = ()=>{
                                         onClick: applyNow
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/custom/templates/ListingDetail.tsx",
-                                        lineNumber: 171,
+                                        lineNumber: 170,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$separator$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Separator"], {
                                         className: "my-4"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/custom/templates/ListingDetail.tsx",
-                                        lineNumber: 172,
+                                        lineNumber: 171,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$custom$2f$molecules$2f$BookTourCard$2f$index$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                                         fileName: "[project]/src/components/custom/templates/ListingDetail.tsx",
-                                        lineNumber: 173,
+                                        lineNumber: 172,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/custom/templates/ListingDetail.tsx",
-                                lineNumber: 170,
+                                lineNumber: 169,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/custom/templates/ListingDetail.tsx",
-                        lineNumber: 160,
+                        lineNumber: 159,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$custom$2f$organisms$2f$TopFeatures$2f$index$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -1563,14 +1566,14 @@ const ListingDetail = ()=>{
                         status: property.status
                     }, void 0, false, {
                         fileName: "[project]/src/components/custom/templates/ListingDetail.tsx",
-                        lineNumber: 176,
+                        lineNumber: 175,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$custom$2f$molecules$2f$PropertyDescription$2f$index$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                         description: property.description
                     }, void 0, false, {
                         fileName: "[project]/src/components/custom/templates/ListingDetail.tsx",
-                        lineNumber: 177,
+                        lineNumber: 176,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$custom$2f$molecules$2f$ListedBy$2f$index$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -1579,31 +1582,31 @@ const ListingDetail = ()=>{
                         companyName: property.listedBy.companyName ?? "Self"
                     }, void 0, false, {
                         fileName: "[project]/src/components/custom/templates/ListingDetail.tsx",
-                        lineNumber: 178,
+                        lineNumber: 177,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$custom$2f$organisms$2f$RentalFeatures$2f$index$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                         features: property.features
                     }, void 0, false, {
                         fileName: "[project]/src/components/custom/templates/ListingDetail.tsx",
-                        lineNumber: 183,
+                        lineNumber: 182,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$custom$2f$molecules$2f$ListingDisclaimer$2f$index$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                         fileName: "[project]/src/components/custom/templates/ListingDetail.tsx",
-                        lineNumber: 184,
+                        lineNumber: 183,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/custom/templates/ListingDetail.tsx",
-                lineNumber: 128,
+                lineNumber: 127,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/custom/templates/ListingDetail.tsx",
-        lineNumber: 126,
+        lineNumber: 125,
         columnNumber: 5
     }, this);
 };

@@ -277,7 +277,7 @@ var _s = __turbopack_context__.k.signature();
 ;
 const PropertyDetailsCard = (props)=>{
     _s();
-    const { id, title, address, features } = props;
+    const { id, title, address, features, thumbNailUrl } = props;
     // ToDo: Update the image source here later.
     // const [imageSrc, setImageSrc] = useState(thumbNailUrl");
     const imageUrl = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$global$2f$utilities$2f$helpers$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["getRandomImageSource"])();
@@ -549,9 +549,6 @@ const BrowseListings = ()=>{
                         const formattedListings = data.listings.map({
                             "BrowseListings.useEffect.fetchListings.formattedListings": (listing)=>(0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$global$2f$utilities$2f$helpers$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["formatListingResponse"])(listing)
                         }["BrowseListings.useEffect.fetchListings.formattedListings"]);
-                        console.log({
-                            formattedListings
-                        });
                         setListings(formattedListings);
                     } catch (error) {
                         console.error("Error fetching listings:", error);
@@ -579,38 +576,38 @@ const BrowseListings = ()=>{
                 children: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$content$2f$listing$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["LISTING_TEXT"].searchPropertyText
             }, void 0, false, {
                 fileName: "[project]/src/components/custom/templates/Listings.tsx",
-                lineNumber: 68,
+                lineNumber: 67,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "mb-8",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Input"], {
                     type: "text",
-                    placeholder: "Title, Description or Address",
+                    placeholder: "Search your listing by Title, Description or Address",
                     className: "w-full sm:max-w-md",
                     value: searchQuery,
                     onChange: handleSearchInputChange
                 }, void 0, false, {
                     fileName: "[project]/src/components/custom/templates/Listings.tsx",
-                    lineNumber: 73,
+                    lineNumber: 72,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/custom/templates/Listings.tsx",
-                lineNumber: 72,
+                lineNumber: 71,
                 columnNumber: 7
             }, this),
             loading ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                 children: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$content$2f$listing$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["LISTING_TEXT"].loadingListings
             }, void 0, false, {
                 fileName: "[project]/src/components/custom/templates/Listings.tsx",
-                lineNumber: 83,
+                lineNumber: 82,
                 columnNumber: 9
             }, this) : listings.length === 0 && debouncedSearchQuery !== "" ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                 children: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$content$2f$listing$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["LISTING_TEXT"].noListingsFound
             }, void 0, false, {
                 fileName: "[project]/src/components/custom/templates/Listings.tsx",
-                lineNumber: 85,
+                lineNumber: 84,
                 columnNumber: 9
             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6",
@@ -618,18 +615,18 @@ const BrowseListings = ()=>{
                         ...property
                     }, property.id, false, {
                         fileName: "[project]/src/components/custom/templates/Listings.tsx",
-                        lineNumber: 89,
+                        lineNumber: 88,
                         columnNumber: 13
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/src/components/custom/templates/Listings.tsx",
-                lineNumber: 87,
+                lineNumber: 86,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/custom/templates/Listings.tsx",
-        lineNumber: 67,
+        lineNumber: 66,
         columnNumber: 5
     }, this);
 };
@@ -657,16 +654,13 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$custom$
 ;
 const Listings = ()=>{
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "bg-gradient-to-b from-white to-violet-50",
-        children: [
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$custom$2f$templates$2f$Listings$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
-                fileName: "[project]/src/app/(pages)/listings/page.tsx",
-                lineNumber: 8,
-                columnNumber: 7
-            }, this),
-            ";"
-        ]
-    }, void 0, true, {
+        className: "bg-gradient-to-b from-white to-violet-50 pb-3",
+        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$custom$2f$templates$2f$Listings$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
+            fileName: "[project]/src/app/(pages)/listings/page.tsx",
+            lineNumber: 8,
+            columnNumber: 7
+        }, this)
+    }, void 0, false, {
         fileName: "[project]/src/app/(pages)/listings/page.tsx",
         lineNumber: 7,
         columnNumber: 5
